@@ -5,7 +5,7 @@ This project showcases my work, skills, experience, and projects in the field of
 
 ## 🔗 Live Demo
 
-[Visit Portfolio Site](https://your-netlify-url.netlify.app) <!-- Replace with your Netlify URL after deployment -->
+[Visit Portfolio Site](https://anushkagargportfolio.netlify.app/#/home) 
 
 ---
 
