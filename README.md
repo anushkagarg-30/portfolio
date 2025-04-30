@@ -21,3 +21,4 @@ This project showcases my work, skills, experience, and projects in the field of
 
 ## 📂 Folder Structure
 
+portfolio/ ├── public/ ├── src/ │ ├── assets/ │ ├── components/ │ ├── containers/ │ └── theme.js ├── .gitignore ├── package.json └── README.md
