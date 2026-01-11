@@ -13,7 +13,7 @@ const greeting = {
   full_name: "Anushka Garg",
   subTitle: "A passionate Machine Learning enthusiast exploring the intersection of AI and data science to solve real-world problems.",
   resumeLink:
-    "https://drive.google.com/file/d/1_29vC2n-W1FIkkzlZ9H5TqRUY7jIaaby/view?usp=sharing",
+    "https://drive.google.com/file/d/1440HGPDL8W-ta4hrBDfflhaTHApEetXP/view?usp=sharing",
   mail: "mailto:anushkagarg3008@gmail.com",
 };
 
@@ -29,6 +29,62 @@ const socialMediaLinks = {
 const skills = {
   data: [
     {
+      title: "Languages & Frameworks",
+      fileName: "FullStackImg",
+      skills: [
+        "⚡ Proficient in Python, Java, C/C++ for software development and data science",
+        "⚡ Full-stack development experience with React, Node.js, and Express.js",
+        "⚡ Backend development using Django, Flask, and Spring frameworks",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "simple-icons:python",
+          style: { color: "#3776AB" },
+        },
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "simple-icons:java",
+          style: { color: "#007396" },
+        },
+        {
+          skillName: "C/C++",
+          fontAwesomeClassname: "simple-icons:cplusplus",
+          style: { color: "#00599C" },
+        },
+        {
+          skillName: "React",
+          fontAwesomeClassname: "simple-icons:react",
+          style: { color: "#61DAFB" },
+        },
+        {
+          skillName: "Node.js",
+          fontAwesomeClassname: "simple-icons:nodedotjs",
+          style: { color: "#339933" },
+        },
+        {
+          skillName: "Express.js",
+          fontAwesomeClassname: "simple-icons:express",
+          style: { color: "#000000" },
+        },
+        {
+          skillName: "Django",
+          fontAwesomeClassname: "simple-icons:django",
+          style: { color: "#092E20" },
+        },
+        {
+          skillName: "Flask",
+          fontAwesomeClassname: "simple-icons:flask",
+          style: { color: "#000000" },
+        },
+        {
+          skillName: "Spring",
+          fontAwesomeClassname: "simple-icons:spring",
+          style: { color: "#6DB33F" },
+        },
+      ],
+    },
+    {
       title: "Data Science & Machine Learning",
       fileName: "DataScienceImg",
       skills: [
@@ -39,9 +95,14 @@ const skills = {
       ],
       softwareSkills: [
         {
-          skillName: "Python",
-          fontAwesomeClassname: "simple-icons:python",
-          style: { color: "#3776AB" },
+          skillName: "Pandas",
+          fontAwesomeClassname: "simple-icons:pandas",
+          style: { color: "#150458" },
+        },
+        {
+          skillName: "NumPy",
+          fontAwesomeClassname: "simple-icons:numpy",
+          style: { color: "#013243" },
         },
         {
           skillName: "Scikit-learn",
@@ -63,25 +124,15 @@ const skills = {
           fontAwesomeClassname: "mdi:chart-line",
           style: { color: "#EC6B23" },
         },
-        {
-          skillName: "Pandas",
-          fontAwesomeClassname: "simple-icons:pandas",
-          style: { color: "#150458" },
-        },
-        {
-          skillName: "NumPy",
-          fontAwesomeClassname: "simple-icons:numpy",
-          style: { color: "#013243" },
-        },
       ],
     },
     {
-      title: "Big Data & Data Engineering",
+      title: "Big Data & Databases",
       fileName: "CloudInfraImg",
       skills: [
         "⚡ Experienced with large-scale data handling using Apache Spark and PySpark",
-        "⚡ Proficient in building ETL pipelines and using SQL for querying large datasets",
-        "⚡ Implemented data cleaning, imputation, normalization, and class balancing techniques like SMOTE",
+        "⚡ Proficient in Firebase (Auth, Firestore, Hosting, Security Rules) for cloud-based applications",
+        "⚡ Designed and optimized relational and NoSQL databases including PostgreSQL, MySQL, MongoDB, and SQLite",
       ],
       softwareSkills: [
         {
@@ -91,35 +142,14 @@ const skills = {
         },
         {
           skillName: "PySpark",
-          fontAwesomeClassname: "simple-icons:python",
-          style: { color: "#3776AB" },
+          fontAwesomeClassname: "simple-icons:apachespark",
+          style: { color: "#E25A1C" },
         },
         {
-          skillName: "SQL",
-          fontAwesomeClassname: "simple-icons:mysql",
-          style: { color: "#4479A1" },
+          skillName: "Firebase",
+          fontAwesomeClassname: "simple-icons:firebase",
+          style: { color: "#FFCA28" },
         },
-        {
-          skillName: "ETL",
-          fontAwesomeClassname: "simple-icons:airbyte",
-          style: { color: "#5D5DFF" },
-        },
-        {
-          skillName: "SMOTE",
-          fontAwesomeClassname: "simple-icons:python",
-          style: { color: "#3776AB" },
-        },
-      ],
-    },
-    {
-      title: "Database & Backend Development",
-      fileName: "FullStackImg",
-      skills: [
-        "⚡ Designed and optimized relational and NoSQL databases",
-        "⚡ Experience with PostgreSQL, MySQL, MongoDB, and SQLite",
-        "⚡ Developed REST APIs and backend services using Flask and Django",
-      ],
-      softwareSkills: [
         {
           skillName: "PostgreSQL",
           fontAwesomeClassname: "simple-icons:postgresql",
@@ -140,24 +170,15 @@ const skills = {
           fontAwesomeClassname: "simple-icons:sqlite",
           style: { color: "#003B57" },
         },
-        {
-          skillName: "Django",
-          fontAwesomeClassname: "simple-icons:django",
-          style: { color: "#092E20" },
-        },
-        {
-          skillName: "Flask",
-          fontAwesomeClassname: "simple-icons:flask",
-          style: { color: "#000000" },
-        },
       ],
     },
     {
-      title: "Visualization & Productivity Tools",
+      title: "Visualization & Tools",
       fileName: "DesignImg",
       skills: [
         "⚡ Skilled in data storytelling using Tableau, Power BI, and Matplotlib",
-        "⚡ Adept with tools like Microsoft Office, Google Workspace, and version control systems like Git",
+        "⚡ Experience building and consuming REST APIs for web applications",
+        "⚡ Proficient with Git for version control and Agile/Scrum methodologies",
       ],
       softwareSkills: [
         {
@@ -176,9 +197,19 @@ const skills = {
           style: { color: "#3776AB" },
         },
         {
+          skillName: "REST APIs",
+          fontAwesomeClassname: "mdi:api",
+          style: { color: "#009688" },
+        },
+        {
           skillName: "Git",
           fontAwesomeClassname: "simple-icons:git",
           style: { color: "#E94E32" },
+        },
+        {
+          skillName: "Agile/Scrum",
+          fontAwesomeClassname: "simple-icons:scrumalliance",
+          style: { color: "#009FDA" },
         },
       ],
     },
@@ -285,12 +316,32 @@ const experience = {
   title: "Experience",
   subtitle: "Work, Internship, and Leadership",
   description:
-    "I have worked on machine learning and data engineering projects during internships, and I have taken leadership roles in student organizations. My experience spans both technical development and soft skill enhancement.",
+    "I have worked on full-stack development, machine learning, and data engineering projects during internships, and I have taken leadership roles in student organizations. My experience spans both technical development and soft skill enhancement.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Work Experience",
       experiences: [
+        {
+          title: "Website Assistant – Civil and Urban Engineering",
+          company: "New York University",
+          company_url: "https://engineering.nyu.edu/",
+          logo_path: "nyu.png",
+          duration: "June 2025 - Present",
+          location: "Brooklyn, NY",
+          description: `• Updated and maintained academic websites using WordPress, including faculty profiles, labs, Ph.D. program content, awards listings, and student club pages.\n• Enhanced accessibility by editing video captions, fixing broken links, and applying NYU digital standards across faculty and course pages.\n• Created and designed various event assets (banners, fliers, newsletters) in Canva and coordinated approvals with faculty and the web team, strengthening departmental outreach.`,
+          color: "#57068C",
+        },
+        {
+          title: "Software Engineer Intern (Remote)",
+          company: "Quantum Pulse Consulting",
+          company_url: "https://qpulse.tech/",
+          logo_path: "quantum-pulse.jpg",
+          duration: "May 2025 - Aug 2025",
+          location: "Detroit, Michigan",
+          description: `• Engineered full-stack features using React, Firebase (Authentication, Firestore, Hosting), and Node/Express APIs, including secure log-in and sign-up flows, onboarding, and rule-based AI interactions.\n• Integrated standardized visual themes utilizing Android SDK and Firebase Web; decreased cross-platform compatibility issues by 45% as measured by the number of user-reported bugs.\n• Streamlined team delivery through PRD drafting, knowledge-hub documentation (Coda), and structured mentor and mentee sessions to support engineering and HR initiatives.`,
+          color: "#4285F4",
+        },
         {
           title: "Developer Intern – Open Innovation",
           company: "HCL Technologies",
@@ -298,17 +349,7 @@ const experience = {
           logo_path: "hcl.jpg",
           duration: "Feb 2024 - Aug 2024",
           location: "Noida, India",
-          description: `• Developed a predictive analytics model using Random Forest and XGBoost, improving accuracy by 30%.\n• Engineered a PostgreSQL-backed data pipeline for managing 10,000+ entries using Python scripts.\n• Contributed to CRM enhancements with data-driven insights to support agricultural tech solutions.`,
-          color: "#0071C5",
-        },
-        {
-          title: "Analyst Intern – Open Innovation",
-          company: "HCL Technologies",
-          company_url: "https://www.hcltech.com/",
-          logo_path: "hcl.jpg",
-          duration: "Apr 2023 - Jun 2023",
-          location: "Noida, India",
-          description: `• Extracted and analyzed structured and unstructured data from 50+ mission datasets.\n• Designed a geospatial data processing system for satellite-based fire detection with 85% accuracy using Python.`,
+          description: `• Directed collaborative efforts on developing a cutting-edge predictive analytics model utilizing Random Forest and XGBoost; achieved significant enhancement in data integrity by improving accuracy measurements up to 30%.\n• Engineered a PostgreSQL database architecture paired with Python scripts to manage 10,000+ data entries, enhancing data integrity and improving accuracy measurements by 20%.`,
           color: "#0071C5",
         },
       ],
@@ -385,6 +426,27 @@ const projects = {
   data: [
     {
       id: "0",
+      name: "Housing Transparency Platform",
+      url: "https://github.com/anushkagarg-30/housing-transparency",
+      description:
+        "A comprehensive housing data analysis platform providing insights into building violations, evictions, complaints, and neighborhood statistics. Built with Django REST API backend and React frontend, integrated with NYC Open Data. Achieved 80% test coverage with 346 tests.",
+      languages: [
+        { name: "Django", iconifyClass: "simple-icons:django" },
+        { name: "React", iconifyClass: "simple-icons:react" },
+        { name: "PostgreSQL", iconifyClass: "simple-icons:postgresql" },
+        { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
+        { name: "Python", iconifyClass: "logos-python" },
+      ],
+      links: [
+        {
+          name: "GitHub",
+          url: "https://github.com/anushkagarg-30/housing-transparency",
+          iconifyClass: "ri:github-fill",
+        },
+      ],
+    },
+    {
+      id: "1",
       name: "Prediction of Flight Delays using Big Data",
       url: "#",
       description:
@@ -403,7 +465,7 @@ const projects = {
       ],
     },
     {
-      id: "1",
+      id: "2",
       name: "Work-Life Balance and Productivity Prediction",
       url: "#",
       description:
@@ -423,7 +485,7 @@ const projects = {
       ],
     },
     {
-      id: "2",
+      id: "3",
       name: "Chronic Kidney Disease Detection Using ML",
       url: "#",
       description:
@@ -442,7 +504,7 @@ const projects = {
       ],
     },
     {
-      id: "3",
+      id: "4",
       name: "CheerBot - Mental Health ChatBot",
       url: "#",
       description:
@@ -461,7 +523,7 @@ const projects = {
       ],
     },
     {
-      id: "4",
+      id: "5",
       name: "Cropable - The Crop Protection App",
       url: "#",
       description:
