@@ -1,0 +1,131 @@
+.repo-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgb(106, 115, 125);
+}
+
+.repo-left-stat {
+  flex-grow: 1;
+  display: flex;
+}
+
+.language-color {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  margin-right: 0.25rem;
+  border-radius: 100%;
+}
+
+.repo-left-stat span {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.repo-name-div {
+  display: flex;
+  align-items: center;
+}
+
+.repo-svg {
+  margin-right: 0.5rem;
+  min-width: 16px;
+}
+
+.repo-name {
+  white-space: nowrap;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(36, 41, 46);
+  font-family: "Google Sans Regular";
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.repo-star-svg {
+  margin-right: 0.3rem;
+}
+
+.repo-description {
+  word-wrap: break-word;
+  text-align: left;
+  font-family: "Google Sans Regular";
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.flexDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Leftitem {
+  align-content: flex-start;
+  flex-grow: 1;
+}
+
+.Rightitem {
+  align-items: flex-end;
+}
+
+.repo-creation-date {
+  margin: 0;
+  font-family: "Google Sans Regular";
+  font-weight: 400;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* ✅ New: Prevent icon overlap */
+.project-tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.project-tech-icon {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .repo-name {
+    font-size: 16px;
+  }
+
+  .repo-description {
+    font-size: 14px;
+  }
+
+  .repo-details {
+    flex-direction: column;
+  }
+
+  .repo-creation-date {
+    font-size: 14px;
+  }
+
+  .project-tech-icon {
+    height: 20px;
+  }
+}

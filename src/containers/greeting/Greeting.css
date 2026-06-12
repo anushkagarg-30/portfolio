@@ -1,0 +1,98 @@
+.main {
+  width: 90%;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.greet-main {
+  max-width: 1370px;
+  padding: 10px;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+
+.greeting-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.greeting-text {
+  margin-top: 80px;
+  font-size: 60px;
+  line-height: 1.2;
+  font-family: "Google Sans Bold";
+}
+
+.greeting-text-p {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-image-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+
+  .greeting-text-p {
+    font-size: 20px;
+  }
+
+  .greet-main {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting-main {
+    display: block;
+    text-align: center;
+  }
+
+  .greeting-text {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+  }
+}
