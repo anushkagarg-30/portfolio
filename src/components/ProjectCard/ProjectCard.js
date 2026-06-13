@@ -6,12 +6,6 @@ import { Fade } from "react-reveal";
 import { style } from "glamor";
 
 export default function ProjectCard({ repo, theme }) {
-  console.log(repo);
-  // function openRepoinNewTab(url) {
-  //   var win = window.open(url, "_blank");
-  //   win.focus();
-  // }
-
   const styles = style({
     color: "rgb(88, 96, 105)",
     backgroundColor: "rgb(255, 255, 255)",
@@ -26,13 +20,18 @@ export default function ProjectCard({ repo, theme }) {
     },
   });
 
+  const sections = [
+    { label: "Problem", text: repo.problem },
+    { label: "Approach", text: repo.approach },
+    { label: "Results", text: repo.results },
+  ].filter((section) => section.text);
+
   return (
     <div>
       <Fade bottom duration={2000} distance="40px">
         <div
           {...styles}
           key={repo.id}
-          // onClick={() => openRepoinNewTab(repo.url)}
           style={{ backgroundColor: theme.projectCard }}
         >
           <div className="repo-name-div">
@@ -40,9 +39,32 @@ export default function ProjectCard({ repo, theme }) {
               {repo.name}
             </p>
           </div>
-          <p className="repo-description" style={{ color: theme.text }}>
-            {repo.description}
-          </p>
+
+          {sections.length > 0 ? (
+            <div className="project-sections">
+              {sections.map((section) => (
+                <div className="project-section" key={section.label}>
+                  <span
+                    className="project-section-label"
+                    style={{ color: theme.accentColor }}
+                  >
+                    {section.label}
+                  </span>
+                  <p
+                    className="project-section-text"
+                    style={{ color: theme.text }}
+                  >
+                    {section.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="repo-description" style={{ color: theme.text }}>
+              {repo.description}
+            </p>
+          )}
+
           <div className="flexDiv">
             <div className="repo-details Leftitem">
               <ProjectLanguages logos={repo.languages} />

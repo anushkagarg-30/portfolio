@@ -490,7 +490,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "I have built full-stack and AI-powered projects spanning semantic legal search, developer networking, housing intelligence, and large-scale predictive analytics. Each project below highlights the problem, architecture, and technical decisions behind the implementation.",
+    "Selected projects across AI, full-stack engineering, and data science — each card outlines the problem, approach, and measurable results.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -518,8 +518,12 @@ const projects = {
       id: "6",
       name: "Juvenile Justice Intelligence Platform",
       url: "https://juvenile-justice-intelligence-platf.vercel.app/",
-      description:
-        "AI-powered legal research platform for juvenile justice cases across the United States, India, and the United Kingdom. Attorneys and researchers enter structured case facts and receive ranked similar precedents and applicable statutes in 1–3 seconds via semantic search over 10,000+ indexed cases and 56 laws. Built a RAG pipeline with pgvector, HNSW indexes, and Gemini 2.0 (768-dimensional embeddings) on Supabase PostgreSQL — combining dense vector search with keyword ranking to surface the top 10 most relevant cases. Optional AI research memos are generated through a retrieval-augmented pipeline with case citations, statute references, comparative jurisdiction insights, and exportable PDF reports. FastAPI backend handles parallel retrieval across cases and statutes; Next.js 15 / React 19 / TypeScript frontend includes case intake, ranked search results, interactive report viewer, and law database browsers. Bulk ingest pipeline scales the corpus with batch embedding generation and query embedding cache (in-memory + PostgreSQL), with fast search separated from slow report generation for production performance. Deployed on Vercel (frontend) and Render (API).",
+      problem:
+        "Juvenile justice research is fragmented across jurisdictions — attorneys spend hours manually searching for analogous precedents and applicable statutes.",
+      approach:
+        "Built a full-stack platform with FastAPI, pgvector/HNSW semantic search, and a Gemini RAG pipeline over 10,000+ cases and 56 laws across the US, India, and UK. Next.js frontend handles structured case intake, ranked retrieval, and report generation.",
+      results:
+        "Sub-second search (1–3s) with top-10 precedent ranking, citation-backed research memos, and PDF export. Deployed on Vercel and Render.",
       languages: [
         { name: "FastAPI", iconifyClass: "simple-icons:fastapi" },
         { name: "Next.js", iconifyClass: "simple-icons:nextdotjs" },
@@ -547,8 +551,12 @@ const projects = {
       id: "7",
       name: "AI DevConnect",
       url: "https://aidevconnect-frontend.onrender.com/",
-      description:
-        "Full-stack developer networking platform that matches collaborators for side projects using semantic similarity — not keyword search. Users submit project ideas, which are embedded with Gemini gemini-embedding-001 (1536-dimensional vectors) and stored in PostgreSQL + pgvector with an ivfflat index. A single cosine-distance query ranks the best collaborator matches in under 120ms p95 under concurrent load (verified via Locust with 50 concurrent users). Features include JWT authentication, role-based access control, async REST APIs (FastAPI + SQLAlchemy + Alembic), match request workflows (send, accept, decline), and real-time WebSocket notifications for match events. React 19 / TypeScript / Tailwind CSS / Vite frontend with responsive project dashboards and live notification toasts. Containerized with Docker Compose, deployed on Render with Neon PostgreSQL (pgvector-enabled), and automated CI/CD via GitHub Actions running pytest, Ruff, ESLint, frontend builds, and load tests enforcing p95 < 200ms on the matching endpoint. Demo clusters span food/ML, DevOps, and justice/social-impact domains with 72% minimum similarity filtering.",
+      problem:
+        "Developers struggle to find collaborators whose project ideas truly align — keyword search misses semantic fit between side projects.",
+      approach:
+        "Built FastAPI + React platform with pgvector ivfflat cosine matching on Gemini embeddings, JWT auth, async REST APIs, WebSocket notifications, Docker, and GitHub Actions CI/CD with Locust load tests.",
+      results:
+        "120ms p95 matching latency under concurrent load; CI enforces p95 < 200ms. Live on Render with real-time match workflows and demo clusters across ML, DevOps, and social-impact domains.",
       languages: [
         { name: "FastAPI", iconifyClass: "simple-icons:fastapi" },
         { name: "React", iconifyClass: "simple-icons:react" },
@@ -574,8 +582,12 @@ const projects = {
       id: "0",
       name: "Housing Transparency Platform",
       url: "https://github.com/anushkagarg-30/housing-transparency",
-      description:
-        "Full-stack housing intelligence platform built with Django REST API and PostgreSQL to centralize property data, tenant reporting, and administrative oversight workflows. Integrated with NYC Open Data to provide insights into building violations, evictions, complaints, and neighborhood statistics. Established secure role-based access controls and reporting services supporting scalable ingestion from multiple external housing datasets. Refined database indexing and query execution strategies — including optimized joins and selective indexing on high-cardinality lookup columns — reducing average API response times by 35% under load. React and TypeScript frontend for interactive data exploration. Achieved 80% test coverage with 346 automated tests across backend services and API endpoints.",
+      problem:
+        "Housing data in NYC is scattered across multiple sources, making it hard for tenants and admins to track violations, evictions, and neighborhood trends in one place.",
+      approach:
+        "Built Django REST API + PostgreSQL platform with role-based access, NYC Open Data integration, and optimized database indexing and ingestion pipelines.",
+      results:
+        "35% faster API response times under load; 80% test coverage with 346 automated tests across backend services.",
       languages: [
         { name: "Django", iconifyClass: "simple-icons:django" },
         { name: "React", iconifyClass: "simple-icons:react" },
@@ -595,8 +607,12 @@ const projects = {
       id: "1",
       name: "Flight Delay Prediction (Big Data Pipeline)",
       url: "#",
-      description:
-        "Large-scale predictive analytics pipeline processing and analyzing over 6 million flight records using Apache Spark and PySpark MLlib. Built scalable ETL workflows for data preprocessing, cleaning, and feature engineering — handling missing values, categorical encoding, and temporal feature extraction across distributed partitions. Optimized storage and retrieval using SQL and PySpark transformations to improve query efficiency on multi-million-row datasets. Trained a Gradient Boosted Trees Classifier (GBTClassifier) for delay prediction, achieving 81% accuracy. Designed the pipeline for horizontal scalability on Spark clusters with partitioned reads and cached intermediate DataFrames to minimize recomputation.",
+      problem:
+        "Airlines need scalable delay prediction from massive, distributed historical flight records that are difficult to preprocess and query efficiently.",
+      approach:
+        "Built Spark/PySpark ETL pipeline on 6M+ records with feature engineering, distributed preprocessing, and GBTClassifier training.",
+      results:
+        "81% prediction accuracy with optimized distributed storage and cached intermediate DataFrames for faster re-runs.",
       languages: [
         { name: "PySpark", iconifyClass: "simple-icons:apachespark" },
         { name: "Python", iconifyClass: "logos-python" },
@@ -614,8 +630,12 @@ const projects = {
       id: "2",
       name: "Work-Life Balance and Productivity Prediction",
       url: "#",
-      description:
-        "Machine learning system analyzing employee satisfaction, attrition risk, and productivity outcomes using Random Forest and XGBoost classifiers. Applied a full preprocessing pipeline — imputation for missing values, one-hot encoding, normalization, and SMOTE oversampling to correct severe class imbalance. Hyperparameter tuning with cross-validation boosted model accuracy from 30% to 63% and improved recall by 35%, making the model viable for HR analytics use cases. Evaluated feature importance to identify the strongest predictors of attrition and built comparative performance metrics across model families.",
+      problem:
+        "HR teams need reliable attrition and productivity predictions, but employee datasets are highly imbalanced and noisy.",
+      approach:
+        "Trained Random Forest and XGBoost models with imputation, encoding, normalization, SMOTE oversampling, and hyperparameter tuning.",
+      results:
+        "Model accuracy improved from 30% to 63%; recall increased by 35% for viable HR analytics use cases.",
       languages: [
         { name: "Python", iconifyClass: "logos-python" },
         { name: "XGBoost", iconifyClass: "mdi:chart-line" },
@@ -634,8 +654,12 @@ const projects = {
       id: "3",
       name: "Chronic Kidney Disease Detection Using ML",
       url: "#",
-      description:
-        "Early chronic kidney disease (CKD) detection system comparing KNN, Decision Tree, Random Forest, and LightGBM classifiers on clinical lab datasets. Implemented feature selection to reduce dimensionality and 10-fold cross-validation for robust model evaluation. LightGBM achieved 98% accuracy with the best precision-recall tradeoff. Built an end-to-end pipeline from raw patient records through preprocessing, model training, and evaluation dashboards for clinical screening scenarios.",
+      problem:
+        "Chronic kidney disease is often detected late — early screening requires accurate classification on clinical lab data with many correlated features.",
+      approach:
+        "Compared KNN, Decision Tree, Random Forest, and LightGBM with feature selection and 10-fold cross-validation on patient records.",
+      results:
+        "LightGBM achieved 98% accuracy with the best precision-recall tradeoff; built end-to-end screening pipeline.",
       languages: [
         { name: "Python", iconifyClass: "logos-python" },
         { name: "LightGBM", iconifyClass: "mdi:tree-outline" },
@@ -653,8 +677,12 @@ const projects = {
       id: "4",
       name: "CheerBot - Mental Health ChatBot",
       url: "#",
-      description:
-        "NLP-based mental health support chatbot using Support Vector Machine (SVM) text classification to route user messages to appropriate response categories. Trained on 100K+ labeled conversational inputs with TF-IDF vectorization and hyperparameter tuning, achieving 95% classification accuracy. Designed response templates for empathetic, context-aware replies across common mental health topics. Built a feedback loop to improve personalized responses based on user interaction patterns.",
+      problem:
+        "Mental health support tools need to accurately route user messages to the right response category at scale without generic, unhelpful replies.",
+      approach:
+        "Built SVM text classifier with TF-IDF vectorization trained on 100K+ labeled conversations, with templated empathetic response routing.",
+      results:
+        "95% classification accuracy with a feedback loop to improve personalized responses over time.",
       languages: [
         { name: "Python", iconifyClass: "logos-python" },
         { name: "SVM", iconifyClass: "simple-icons:scikitlearn" },
@@ -672,8 +700,12 @@ const projects = {
       id: "5",
       name: "Cropable - The Crop Protection App",
       url: "#",
-      description:
-        "AI-based crop disease detection mobile application using a custom 5-layer Convolutional Neural Network (CNN) built with TensorFlow/Keras. Processed 10K+ labeled crop images across multiple disease categories with data augmentation (rotation, flip, brightness) to improve generalization. Integrated real-time treatment recommendation algorithms that map detected diseases to actionable remediation steps for farmers. Achieved 90% detection accuracy on held-out test sets. Led the full development lifecycle from dataset curation and model training to deployment-ready inference APIs.",
+      problem:
+        "Farmers lack fast, accessible tools to identify crop diseases early and get actionable treatment guidance in the field.",
+      approach:
+        "Trained a 5-layer CNN on 10K+ labeled crop images with data augmentation; mapped detections to treatment recommendation algorithms.",
+      results:
+        "90% disease detection accuracy on held-out test sets with deployment-ready inference APIs.",
       languages: [
         { name: "Python", iconifyClass: "logos-python" },
         { name: "TensorFlow", iconifyClass: "simple-icons:tensorflow" },
