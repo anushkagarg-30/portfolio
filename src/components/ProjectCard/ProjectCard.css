@@ -55,10 +55,7 @@
   word-wrap: break-word;
   text-align: left;
   font-family: "Google Sans Regular";
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.6;
 }
 
 .repo-details {
